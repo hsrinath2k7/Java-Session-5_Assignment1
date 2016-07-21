@@ -1,0 +1,79 @@
+// Super Class RectangleArea.java
+
+public class RectangleArea {
+	
+		
+	
+	public void rectarea(double width, double height){
+		
+		
+		double Area = width * height;
+		
+		System.out.println("Area of the Rectangle: " + Area);
+		
+		//return Area;
+		
+		
+	}
+
+}
+
+// Subclass
+
+import java.util.Scanner;
+
+public class TriangleArea extends RectangleArea {
+	
+	static double w;
+	static double h;
+	
+	
+public void triarea(double width, double height){
+		
+		
+		double Area = (width * height) / 2;
+		
+		System.out.println("Area of the Triangle: " + Area);
+		
+		//return Area;
+		
+		
+	}
+	
+	
+	public static void main(String[] args){
+		
+		
+		
+		System.out.println("To Calculcate Area of Rectangle and Triangle.");
+		
+		Scanner rd = new Scanner(System.in);
+		
+		System.out.print("Enter the Value of Width: ");
+		
+		w = rd.nextDouble();
+		
+		System.out.print("Enter the Value of Height: ");
+		h = rd.nextDouble();
+		
+		TriangleArea ta = new TriangleArea();
+		
+		ta.rectarea(w, h);
+		ta.triarea(w, h);
+		
+		
+		
+		
+	}
+
+}
+
+/* Output
+To Calculcate Area of Rectangle and Triangle.
+Enter the Value of Width: 20
+Enter the Value of Height: 50
+Area of the Rectangle: 1000.0
+Area of the Triangle: 500.0
+
+
+*/
